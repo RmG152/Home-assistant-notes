@@ -1,0 +1,7 @@
+command_line:
+  - sensor:
+      name: Victoria Metrics Data
+      unique_id: sensor_victoria_metrics_data
+      command: 'du -s /share/victoria-metrics-data'
+      unit_of_measurement: 'MiB'
+      value_template: '{{ value.split("\t" )[0] | multiply(1/1024) | round(2) }}'

@@ -1,0 +1,2 @@
+# Trams horaris llum
+{{ 'valle' if now().weekday() == 5 or now().weekday() == 6 or (today_at('00:00') < now() < today_at('08:00')) else ('punta' if (today_at('10:00') < now() < today_at('14:00')) or (today_at('18:00') < now() < today_at('22:00')) else 'llano') }}
